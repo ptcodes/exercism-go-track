@@ -1,14 +1,14 @@
 package pascal
 
-func factorial(n int) (result int) {
+func factorial(n int) int {
 	if n > 0 {
-		result = n * factorial(n-1)
-		return
+		result := n * factorial(n-1)
+		return result
 	}
 	return 1
 }
 
-func formula(row, term int) (result int) {
+func formula(row, term int) int {
 	return factorial(row) / (factorial(term) * factorial(row-term))
 }
 
